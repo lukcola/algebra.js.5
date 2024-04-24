@@ -32,5 +32,40 @@ for (var i = 0; i < matrix.length; i++) {
         console.log("matrix[" + i + "][" + j + "] = " + matrix[i][j]);
     }
 }
+
+
+var myNames = ["Jane", "John", , "Mike"];
+
+for(var myName of myNames){
+    console.log(myName);
+}
+
 */
 
+var names = ["John", "Jane", "Bob", , "Mike"];
+
+for (var myname of names) {
+    console.log(myname);
+}
+
+names.push("Luka");
+console.log(names);
+
+var i = 0;
+do {
+    console.log(names[i]);
+    i++;
+    console.log(i);
+} while (names[i] == "Jane");
+
+
+var names2 = [];
+for (i = 0; i < names.length; i++) {
+    if (typeof(names[i]) == "undefined"){
+        continue;
+    }
+    names2.push(names[i]);
+}
+
+console.log(names2);
+console.log(names2.sort());
